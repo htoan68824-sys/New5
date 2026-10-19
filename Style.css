@@ -1,0 +1,65 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+p {
+    margin-bottom: 25px;
+}
+
+.gallery-container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.responsive {
+    float: left;
+    width: 25%;
+    padding: 0 6px;
+    margin-bottom: 12px;
+}
+
+.gallery {
+    border: 1px solid #cccccc;
+}
+
+.gallery:hover {
+    border-color: #777777;
+}
+
+.gallery img {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.description {
+    padding: 15px;
+    text-align: center;
+}
+
+/* Màn hình từ 501px đến 700px: 2 ảnh mỗi dòng */
+@media only screen and (max-width: 700px) {
+    .responsive {
+        width: 50%;
+    }
+}
+
+/* Màn hình 500px trở xuống: 1 ảnh mỗi dòng */
+@media only screen and (max-width: 500px) {
+    .responsive {
+        width: 100%;
+    }
+}
